@@ -1,0 +1,22 @@
+﻿@page
+@model WebApplication3_Dz2.Pages.Page2Model
+@{
+
+    List<string> list = new List<string>();
+
+    list.Add("Кращий спосіб почати робити – перестати говорити і почати робити. – Уолт Дісней");
+    list.Add("- Все, що можна уявити – реально. – Пабло Пікассо");
+    list.Add("- Навчання ніколи не вичерпує розум. – Леонардо да Вінчі");
+
+
+    string Get_quote()
+    {
+        Random r = new Random();
+        return list[r.Next(0,2)];
+    }
+   
+}
+
+
+<h2>@Get_quote()</h2>
+ 
